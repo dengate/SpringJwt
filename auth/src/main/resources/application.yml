@@ -1,0 +1,20 @@
+server:
+  port: 9025
+spring:
+  application:
+    name: auth
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: ahmet
+    hikari:
+      connection-timeout: 3000000
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+  cloud:
+    discovery:
+      enabled: true
